@@ -1,0 +1,9 @@
+.grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 20px;
+
+  background-color: #0e0e0e;
+}

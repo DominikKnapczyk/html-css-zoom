@@ -4,8 +4,10 @@
 }
 
 .speacker {
+  position: absolute;
+  right: 5px;
+  top: 5px;
   display: flex;
-  justify-content: flex-end;
   padding: 5px;
   background-color: #0e0e0e;
   font-size: 14px;
@@ -36,6 +38,7 @@ main {
   row-gap: 20px;
 
   padding: 20px;
+  padding-top: 50px;
 
   align-items: center;
 
@@ -81,18 +84,65 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  width: 75%;
-  height: 40px;
-}
+  width: 100%;
 
-.nav-right-section {
-  justify-content: right;
-  text-align: center;
 }
 
 .nav-left-section {
+  display: flex;
   justify-content: left;
 } 
+
+.nav-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-icon > i {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.nav-icon > span {
+  font-size: 12px;
+}
+
+.nav-left-section > i {
+  font-size: 12px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.nav-middle-section {
+  display: flex;
+  justify-content: middle;
+} 
+
+.nav-middle-section > i {
+  font-size: 12px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.nav-right-section {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  color: red;
+  background-color: #4a4a4a;
+  height: 10vh;
+  padding: 0 20px;
+  
+}
+
+
+
+
 
 
 

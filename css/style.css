@@ -1,40 +1,59 @@
+/* GENERAL */
+
+:root {
+  --nav-height: 5rem;
+  --view-height: 2.2rem;
+  --main-height: calc(100vh - var(--nav-height) - var(--view-height));
+}
+
 * {
   color: #f0f6f9;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.speacker {
-  position: absolute;
-  right: 5px;
-  top: 5px;
+/* VIEW BAR */
+
+.view-bar {
   display: flex;
+  justify-content: flex-end;
+
+  height: var(--view-height);
+
   padding: 5px;
-  background-color: #0e0e0e;
+
   font-size: 14px;
+
+  background-color: #0e0e0e;
 }
 
-.speacker > * {
-  background-color: #4a4a4a;
+.view-bar > * {
   margin-left: 4px;
   padding: 5px;
   border-radius: 5px;
+
+  background-color: #4a4a4a;
 }
+
+/* GRID SYSTEM */
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
+
+  overflow: auto;
+
+  height: var(--main-height);
+  min-height: var(--main-min-heigh);
+
   background-color: #0e0e0e;
 }
-
-
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  column-gap: 10px;
+  column-gap: 20px;
   row-gap: 20px;
 
   padding: 20px;
@@ -42,15 +61,14 @@ main {
 
   align-items: center;
 
-
-
-
   background-color: #0e0e0e;
 }
 
 .card {
   position: relative;
+
   color: white;
+
   font-size: 13px;
 }
 
@@ -61,6 +79,7 @@ main {
 
   padding: 5px;
   padding-bottom: 7px;
+
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -72,11 +91,12 @@ nav {
   justify-content: center;
   flex-direction: column;
 
-  background-color: #1a1a1a;
-  min-height: 10vh;
-  width: 100%;
+  height: var(--nav-height);
 
+  text-align: center;
   color: white;
+  
+  background-color: #1a1a1a;
 }
 
 .nav-container{
@@ -85,13 +105,7 @@ nav {
   align-items: center;
 
   width: 100%;
-
 }
-
-.nav-left-section {
-  display: flex;
-  justify-content: left;
-} 
 
 .nav-icon {
   display: flex;
@@ -112,10 +126,14 @@ nav {
   font-size: 12px;
 }
 
-.nav-left-section > i {
+.nav-left-section {
+  display: flex;
+  justify-content: left;
+} 
+
+.fa-angle-up {
   font-size: 12px;
-  padding-left: 5px;
-  padding-top: 5px;
+  padding: 12px 5px 5px 0;
 }
 
 .nav-middle-section {
@@ -123,10 +141,8 @@ nav {
   justify-content: middle;
 } 
 
-.nav-middle-section > i {
-  font-size: 12px;
-  padding-right: 5px;
-  padding-top: 5px;
+.fa-share-from-square {
+  color: green;
 }
 
 .nav-right-section {
@@ -135,14 +151,6 @@ nav {
   align-items: center;
   color: red;
   background-color: #4a4a4a;
-  height: 10vh;
   padding: 0 20px;
-  
+  height: var(--nav-height);
 }
-
-
-
-
-
-
-
